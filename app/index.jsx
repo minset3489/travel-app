@@ -40,12 +40,12 @@ export default function Index() {
       <CustomButton 
       title={'Continue with Email'}
       handlePress={ () => {router.push('/sign-in')}}
-      containerStyle='w-full mt-7'
+      containerStyles='w-full mt-7'
       />
       </View>
 
     </ScrollView>
-    <StatusBar backgroundColor="#161622" style="light"/>
+    <StatusBar backgroundColor="#1e293b" style="light"/>
   </SafeAreaView>
   );
 }
