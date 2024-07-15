@@ -1,0 +1,23 @@
+
+import React from 'react'
+import { DrawerContentScrollView, DrawerItem, DrawerItemList } from '@react-navigation/drawer'
+import { useRouter } from 'expo-router'
+import { View } from 'react-native'
+
+const CustomDrawerContent = (props) => {
+    const router = useRouter()
+  return (
+    <View className='flex flex-1'>
+    <DrawerContentScrollView {...props} scrollEnabled={false}
+        contentContainerStyle={{
+            backgroundColor:'#dde3fe'
+        }}
+    >
+        <DrawerItemList {...props} />
+        <DrawerItem label={'Logout'} onPress={()=> router.replace('/')}/>
+    </DrawerContentScrollView>
+    </View>
+  )
+}
+
+export default CustomDrawerContent
